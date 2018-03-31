@@ -1,22 +1,20 @@
-drop table recruit.jobs;
-create table recruit.jobs
-(
-company varchar(20) default '',
-department varchar(255) default '',
-name varchar(255) default '',
-category1 int default 0,
-category2 varchar(255) default '',
-degree varchar(20) default '',
-base varchar(20) default '',
-experience int default 0,
-origin_id varchar(128) default '',
-origin_url varchar(512) default '',
-requirement text default '',
-description text default '',
-open_time datetime default '0000-00-00 00:00:00',
-close_time datetime default '0000-00-00 00:00:00', 
-is_urgent int default 0,
-create_time datetime default '0000-00-00 00:00:00',
-modify_time datetime default  '0000-00-00 00:00:00',
-unique com_job_id (company, origin_id)
-);
+CREATE TABLE recruit.jobs(
+    company VARCHAR(20) DEFAULT '',
+    department VARCHAR(255) DEFAULT '',
+    NAME VARCHAR(255) DEFAULT '',
+    category1 INT DEFAULT 0,
+    category2 VARCHAR(255) DEFAULT '',
+    degree VARCHAR(20) DEFAULT '',
+    base VARCHAR(20) DEFAULT '',
+    experience INT DEFAULT 0,
+    origin_id VARCHAR(128) DEFAULT '',
+    origin_url VARCHAR(512) DEFAULT '',
+    requirement TEXT,
+    description TEXT,
+    open_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    close_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    is_urgent INT DEFAULT 0,
+    create_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    modify_time DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE com_job_id(company, origin_id)
+)
