@@ -1,4 +1,4 @@
-#drop recruit.jobs;
+drop table recruit.jobs;
 create table recruit.jobs
 (
 company varchar(20) default '',
