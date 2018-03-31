@@ -17,4 +17,4 @@ CREATE TABLE recruit.jobs(
     create_time DATETIME DEFAULT CURRENT_TIMESTAMP,
     modify_time DATETIME DEFAULT CURRENT_TIMESTAMP,
     UNIQUE com_job_id(company, origin_id)
-)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
